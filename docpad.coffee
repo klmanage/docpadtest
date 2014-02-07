@@ -85,11 +85,14 @@ docpadConfig = {
 	# These are special collections that our website makes available to us
 
 	collections:
-		pages: (database) ->
-			database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
+		pages:  ->
+			@getCollection("html").findAllLive({isPage:true})
 
 		posts: (database) ->
 			database.findAllLive({tags:$has:'post'}, [date:-1])
+
+		articles: (database) ->
+			database.findAllLive({tags:$has:'article'},[date:-1])
 
 
 	# =================================

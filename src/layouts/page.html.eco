@@ -1,7 +1,19 @@
 ---
 layout: default
 ---
-
+<div class="row">
+	<div class="col-md-4">
+		<h2>Menu</h2>
+		<% for document in @getCollection('posts').toJSON(): %>
+		<li><span><%= document.date.toDateString() %></span>
+		&raquo;
+		<a href="<%= document.url %>"><%= document.title %></a></li>
+	<% end %>
+	</div>
+	<div class="col-md-8">
+		<h2>Content</h2>
+	</div>
+</div>
 <article id="page" class="page">
 	<h1><%= @document.title %></h1>
 	<div class="page-content"><%- @content %></div>

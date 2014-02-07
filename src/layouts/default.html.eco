@@ -50,14 +50,14 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<% for document in @getCollection('pages').toJSON(): %>
+					<% for page in @getCollection("pages").toJSON(): %>
 						<li
 							typeof="sioc:Page"
-							about="<%= document.url %>"
-							class="<%= 'active'	if @document.url is document.url %>"
+							about="<%= page.url %>"
+							class="<%= 'active'	if @document.url is page.url %>"
 						>
-							<a href="<%= document.url %>" property="dc:title">
-								<%= document.title %>
+							<a href="<%= page.url %>" property="dc:title">
+								<%= page.title %>
 							</a>
 						</li>
 					<% end %>
