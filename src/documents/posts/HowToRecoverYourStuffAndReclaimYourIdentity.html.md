@@ -1,5 +1,5 @@
 ```
-title: Recover
+title: Recover your stuff
 layout: postspage
 tags: ['intro','post']
 
