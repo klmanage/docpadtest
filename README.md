@@ -1,1 +1,1 @@
-docpad test for azure
+docpad test for azure deployment from GitHub
