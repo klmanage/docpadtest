@@ -75,14 +75,18 @@
 			<%- @content %>
 		</section>
 
-		<!-- Footer -->
-		<footer>
+		
+	</div><!-- /container -->
+	<!-- Footer -->
+		<footer >
+		<div class="footer-colour">
 			<p class="pull-left">&copy; Company <%- (new Date()).getFullYear() %></p>
 			<p class="pull-right">
 				This website was last updated at <%= @site.date.toISOString() %>
-			</p>
+			</p> 
+		</div>
+			
 		</footer>
-	</div><!-- /container -->
 
 	<!-- Scripts -->
 	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
