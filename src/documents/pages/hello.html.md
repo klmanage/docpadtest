@@ -1,8 +1,7 @@
 ```
-title: This is a Page
+title: Introduction
 layout: page
 tags: ['intro','page']
 isPage: true
 ```
 
-This is a **page**
