@@ -1,3 +1,6 @@
+<!--nested template inside the 'pages' layout.-->
+<!--'pages' layout provides a left nav for -->
+
 ---
 title: Articles
 layout: page
@@ -6,8 +9,9 @@ isPage: true
 
 <nav class="linklist">
 	<% for document in @getCollection('articles').toJSON(): %>
-		<li><span><%= document.date.toDateString() %></span>
-		&raquo;
-		<a href="<%= document.url %>"><%= document.title %></a></li>
+		<li>
+			<span><%= document.date.toDateString() %></span>&raquo;
+			<a href="<%= document.url %>"><%= document.title %></a>
+		</li>
 	<% end %>
 </nav>
