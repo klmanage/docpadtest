@@ -1,6 +1,3 @@
-<!--nested template inside the 'pages' layout.-->
-<!--'pages' layout provides a left nav for -->
-
 ---
 title: Articles
 layout: page
