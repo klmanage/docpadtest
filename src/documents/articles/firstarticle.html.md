@@ -2,10 +2,10 @@
 title: A Password for each site
 layout: article
 tags: ['intro','article']
-pageOrder: 4
+
 ```
 
-###Why you must **never** use your Gmail/Hotmail password for any other sites.
+###Why you must *never* use your Gmail/Hotmail password for any other sites.
 
 If you use your webmail password for other sites and one of those sites is compromised you run the risk of having your Gmail account hijacked. This is a *very* bad thing.
 

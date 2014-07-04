@@ -6,7 +6,7 @@ layout: default
 	<h1><%= @document.title %></h1>
 	<div class="post-content"><%- @content %></div>
 </article>
-
+ 
 <footer>
 	<% if  @document.relatedDocuments and @document.relatedDocuments.length: %>
 	<section id="related">

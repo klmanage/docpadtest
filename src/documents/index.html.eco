@@ -1,0 +1,42 @@
+---
+layout: 'default'
+title: 'Home'
+
+---
+ 
+<!-- Primary marketing message or call to action -->
+<div class="jumbotron">
+	<h1>Documentation!</h1>
+	<p>
+		Some meaningful content here...
+	</p>
+</div>
+
+
+<!-- Example row of columns -->
+<div class="row" class="text-center">
+	<div class="col-lg-4">
+		<h2>Latest Post</h2>
+		
+			<% thedoc = @getCollection("latestPost").toJSON()[0] %>
+			<div><a href=<%= thedoc.url %>><%= thedoc.title %></a></div>
+			<div><%= thedoc.date %></div>
+			
+		
+		<p><a class="btn btn-default" href="#">Visit Website</a></p>
+	</div>
+	<div class="col-lg-4">
+		<h2>Latest Article</h2>
+		<% thedoc = @getCollection("latestArticle").toJSON()[0] %>
+			<div><a href=<%= thedoc.url %>><%= thedoc.title %></a></div>
+			<div><%= thedoc.date %></div>
+		<p><a class="btn btn-default" href="http://twitter.github.com/bootstrap/">Visit Website</a></p>
+	</div>
+	<div class="col-lg-4">
+		<h2>Latest Tutorial</h2>
+		<% thedoc = @getCollection("latestTutorial").toJSON()[0] %>
+			<div><a href=<%= thedoc.url %>><%= thedoc.title %></a></div>
+			<div><%= thedoc.date %></div>
+		<p><a class="btn btn-default" href="http://twitter.github.com/bootstrap/">Visit Website</a></p>
+	</div>
+</div>

@@ -95,7 +95,12 @@ docpadConfig = {
 
 		articles: (database) ->
 			database.findAllLive({tags:$has:'article'},[date:-1])
-
+		latestPost: ->
+    		@getCollection("html").findAllLive({relativeOutDirPath:['posts']},[date:-1])
+    	latestArticle: ->
+    		@getCollection("html").findAllLive({relativeOutDirPath:['articles']},[date:-1])
+    	latestTutorial: ->
+    		@getCollection("html").findAllLive({relativeOutDirPath:['tutorials']},[date:-1])
 
 	# =================================
 	# Plugins
