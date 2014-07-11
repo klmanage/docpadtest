@@ -2,9 +2,13 @@
 # It is simply a CoffeeScript Object which is parsed by CSON
 docpadConfig = {
 
+	# Render Passes
+	renderPasses: 1
+
 	# =================================
 	# Template Data
 	# These are variables that will be accessible via our templates
+	# To access one of these within our templates, refer to the FAQ: https://github.com/bevry/docpad/wiki/FAQ
 	# To access one of these within our templates, refer to the FAQ: https://github.com/bevry/docpad/wiki/FAQ
 
 	templateData:
@@ -43,6 +47,7 @@ docpadConfig = {
 			styles: [
 				"/styles/twitter-bootstrap.css"
 				"/styles/style.css"
+				"/styles/myStyles.css"
 			]
 
 			# Scripts
@@ -85,12 +90,20 @@ docpadConfig = {
 	# These are special collections that our website makes available to us
 
 	collections:
-		pages: (database) ->
-			database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
+		pages:  ->
+			@getCollection("html").findAllLive({isPage:true})
 
 		posts: (database) ->
 			database.findAllLive({tags:$has:'post'}, [date:-1])
 
+		articles: (database) ->
+			database.findAllLive({tags:$has:'article'},[date:-1])
+		latestPost: ->
+    		@getCollection("html").findAllLive({relativeOutDirPath:['posts']},[date:-1])
+    	latestArticle: ->
+    		@getCollection("html").findAllLive({relativeOutDirPath:['articles']},[date:-1])
+    	latestTutorial: ->
+    		@getCollection("html").findAllLive({relativeOutDirPath:['tutorials']},[date:-1])
 
 	# =================================
 	# Plugins
