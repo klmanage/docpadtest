@@ -1,0 +1,16 @@
+---
+title: Posts
+layout: page
+isPage: true
+---
+
+<ul class="list-unstyled">
+	<% for document in @getCollection('posts').toJSON(): %>
+		<li>
+				<h3><%= document.title %></h2>
+				<span><%= document.date.toDateString() %></span>
+				</hr>
+		</li>
+	<% end %>
+</ul>
+
