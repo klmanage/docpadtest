@@ -24,7 +24,7 @@ The 'design' of the site is managed through 'layouts'. Layouts are basically tem
 Layouts.
 Layouts are used to customise the context in which different content types are displayed.
 Layouts can be nested in an heirarchical structure if needed.
-<img src="~/files/images/iphone.png">
+<img src="../images/iphone.png">
 
 Can you have interaction with a static site? 
 

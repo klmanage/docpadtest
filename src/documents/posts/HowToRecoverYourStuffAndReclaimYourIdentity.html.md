@@ -1,10 +1,6 @@
 ```
 title: Recover your stuff
-<<<<<<< HEAD
 layout: single-post
-=======
-layout: postspage
->>>>>>> 6a946879dc8573f4cce30c117bdae952067ce8c1
 tags: ['intro','post']
 
 ```

@@ -21,12 +21,9 @@ title: 'Home'
 			<% thedoc = @getCollection("latestPost").toJSON()[0] %>
 			<div><a href=<%= thedoc.url %>><%= thedoc.title %></a></div>
 			<div><%= thedoc.date %></div>
-<<<<<<< HEAD
+
 			<div><%= thedoc.content %></div>
-=======
->>>>>>> 6a946879dc8573f4cce30c117bdae952067ce8c1
-			
-		
+
 		<p><a class="btn btn-default" href="#">Visit Website</a></p>
 	</div>
 	<div class="col-lg-4">
@@ -34,10 +31,9 @@ title: 'Home'
 		<% thedoc = @getCollection("latestArticle").toJSON()[0] %>
 			<div><a href=<%= thedoc.url %>><%= thedoc.title %></a></div>
 			<div><%= thedoc.date %></div>
-<<<<<<< HEAD
+
 			<div><%= thedoc.content %></div>
-=======
->>>>>>> 6a946879dc8573f4cce30c117bdae952067ce8c1
+
 		<p><a class="btn btn-default" href="http://twitter.github.com/bootstrap/">Visit Website</a></p>
 	</div>
 	<div class="col-lg-4">
