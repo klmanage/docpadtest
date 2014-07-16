@@ -8,7 +8,7 @@ isPage: true
 	<% for document in @getCollection('posts').toJSON(): %>
 		<li>
 				<h2><%= document.title %></h2>
-				<div><%= document.content%></div>
+				<div><%-document.contentRenderedWithoutLayouts%></div>
 				<span><%= document.date.toDateString() %></span>
 		</li>
 	<% end %>
