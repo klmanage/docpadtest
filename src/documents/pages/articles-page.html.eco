@@ -9,7 +9,9 @@ isPage: true
 		<li>
 			<div><%= document.date.toDateString() %></div>
 			<h3><%= document.title %></h3>
-			<div><%=document.content %></div>
+			<div><%-document.contentRenderedWithoutLayouts%></div>
+
 		</li>
+		<hr>
 	<% end %>
 </ul>
